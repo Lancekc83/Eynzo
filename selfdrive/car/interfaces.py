@@ -30,6 +30,8 @@ class CarInterfaceBase():
     self.frame = 0
     self.low_speed_alert = False
 
+    self.dragonconf = None
+
     if CarState is not None:
       self.CS = CarState(CP)
       self.cp = self.CS.get_can_parser(CP)
@@ -39,6 +41,8 @@ class CarInterfaceBase():
     self.CC = None
     if CarController is not None:
       self.CC = CarController(self.cp.dbc_name, CP, self.VM)
+
+    self.dragonconf = None
 
   @staticmethod
   def calc_accel_override(a_ego, a_target, v_ego, v_target):
@@ -87,7 +91,7 @@ class CarInterfaceBase():
     return ret
 
   # returns a car.CarState, pass in car.CarControl
-  def update(self, c, can_strings):
+  def update(self, c, can_strings, dragonconf):
     raise NotImplementedError
 
   # return sendcan, pass in a car.CarControl
@@ -101,26 +105,28 @@ class CarInterfaceBase():
       events.add(EventName.doorOpen)
     if cs_out.seatbeltUnlatched:
       events.add(EventName.seatbeltNotLatched)
-    if cs_out.gearShifter != GearShifter.drive and cs_out.gearShifter not in extra_gears and not (cs_out.gearShifter == GearShifter.unknown and self.CS.out.gearShifter != GearShifter.unknown):
-      events.add(EventName.wrongGear)
+    if not self.dragonconf.dpAtl and self.dragonconf.dpGearCheck and cs_out.gearShifter != GearShifter.drive and cs_out.gearShifter not in extra_gears and not (cs_out.gearShifter == GearShifter.unknown and self.CS.out.gearShifter != GearShifter.unknown):
+          events.add(EventName.wrongGear)
     if cs_out.gearShifter == GearShifter.reverse:
       events.add(EventName.reverseGear)
-    if not cs_out.cruiseState.available:
+    if not cs_out.cruiseState.available and not self.dragonconf.dpAtl:
       events.add(EventName.wrongCarMode)
     if cs_out.espDisabled:
       events.add(EventName.espDisabled)
-    if cs_out.gasPressed and self.disengage_on_gas:
+    if cs_out.gasPressed and not self.dragonconf.dpAllowGas:
       events.add(EventName.gasPressed)
     if cs_out.stockFcw:
       events.add(EventName.stockFcw)
     if cs_out.stockAeb:
       events.add(EventName.stockAeb)
-    if cs_out.vEgo > MAX_CTRL_SPEED:
+    if cs_out.vEgo > MAX_CTRL_SPEED and self.dragonconf.dpSpeedCheck:
       events.add(EventName.speedTooHigh)
-    if cs_out.cruiseState.nonAdaptive:
+    if cs_out.cruiseState.nonAdaptive and not self.dragonconf.dpAtl:
       events.add(EventName.wrongCruiseMode)
 
-    if cs_out.steerError:
+    if (cs_out.leftBlinker or cs_out.rightBlinker) and self.dragonconf.dpLateralMode == 0:
+      events.add(EventName.manualSteeringRequiredBlinkersOn)
+    elif cs_out.steerError:
       events.add(EventName.steerUnavailable)
     elif cs_out.steerWarning:
       if cs_out.steeringPressed:
@@ -131,14 +137,16 @@ class CarInterfaceBase():
     # Disable on rising edge of gas or brake. Also disable on brake when speed > 0.
     # Optionally allow to press gas at zero speed to resume.
     # e.g. Chrysler does not spam the resume button yet, so resuming with gas is handy. FIXME!
-    if (self.disengage_on_gas and cs_out.gasPressed and (not self.CS.out.gasPressed) and cs_out.vEgo > gas_resume_speed) or \
-       (cs_out.brakePressed and (not self.CS.out.brakePressed or not cs_out.standstill)):
-      if (cs_out.lkasEnabled):
-        cs_out.disengageByBrake = True
-      if (cs_out.cruiseState.enabled):
-        events.add(EventName.pedalPressed)
-      else:
-        events.add(EventName.silentPedalPressed)
+    if self.dragonconf.dpAtl:
+      pass
+    elif self.dragonconf.dpAllowGas:
+      if cs_out.brakePressed and (not self.CS.out.brakePressed or not cs_out.standstill):
+        if (cs_out.lkasEnabled):
+          cs_out.disengageByBrake = True
+        if (cs_out.cruiseState.enabled):
+          events.add(EventName.pedalPressed)
+        else:
+          events.add(EventName.silentPedalPressed)
 
     # we engage when pcm is active (rising edge)
     if pcm_enable:

@@ -110,12 +110,6 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     wideRoadCameraError @102;
     localizerMalfunction @103;
 
-    manualSteeringRequired @105;
-    manualLongitudinalRequired @106;
-    silentPedalPressed @107;
-    silentButtonEnable @108;
-    silentBrakeHold @109;
-
     radarCanErrorDEPRECATED @15;
     radarCommIssueDEPRECATED @67;
     gasUnavailableDEPRECATED @3;
@@ -135,6 +129,24 @@ struct CarEvent @0x9b1657f34caf3ad3 {
     neosUpdateRequiredDEPRECATED @88;
     modelLagWarningDEPRECATED @93;
     startupOneplusDEPRECATED @82;
+
+    #dp
+    preLaneChangeLeftALC @105;
+    preLaneChangeRightALC @106;
+    manualSteeringRequired @107;
+    manualSteeringRequiredBlinkersOn @108;
+    leadCarMoving @109;
+
+    # timebomb assist
+    timebombWarn @110;
+    timebombBypassing @111;
+    timebombBypassed @112;
+    
+    #honda spektor
+    manualLongitudinalRequired @113;
+    silentPedalPressed @114;
+    silentButtonEnable @115;
+    silentBrakeHold @116;
   }
 }
 
@@ -193,20 +205,24 @@ struct CarState {
   # clutch (manual transmission only)
   clutchPressed @28 :Bool;
 
-  lkasEnabled @37 :Bool;
-  leftBlinkerOn @38 :Bool;
-  rightBlinkerOn @39 :Bool;
-  disengageByBrake @40 :Bool;
-  automaticLaneChange @41 :Bool;
-  belowLaneChangeSpeed @42 :Bool;
-  accEnabled @43 :Bool;
-
   # which packets this state came from
   canMonoTimes @12: List(UInt64);
 
   # blindspot sensors
   leftBlindspot @33 :Bool; # Is there something blocking the left lane change
   rightBlindspot @34 :Bool; # Is there something blocking the right lane change
+
+  # dp
+  stopSteering @37 :Bool; # timebomb - stopSteering
+  #spektor
+  lkasEnabled @38 :Bool;
+  leftBlinkerOn @39 :Bool;
+  rightBlinkerOn @40 :Bool;
+  disengageByBrake @41 :Bool;
+  automaticLaneChange @42 :Bool;
+  belowLaneChangeSpeed @43 :Bool;
+  accEnabled @44 :Bool;
+
 
   struct WheelSpeeds {
     # optional wheel speeds
@@ -260,7 +276,7 @@ struct CarState {
   }
 
   errorsDEPRECATED @0 :List(CarEvent.EventName);
-  brakeLightsDEPRECATED @19 :Bool;
+  brakeLights @19 :Bool;
 }
 
 # ******* radar state @ 20hz *******

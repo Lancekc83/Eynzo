@@ -604,6 +604,15 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
     ET.NO_ENTRY: NoEntryAlert("Brake Hold Active"),
   },
 
+  EventName.silentBrakeHold: {
+    ET.USER_DISABLE: Alert(
+      "",
+      "",
+      AlertStatus.normal, AlertSize.none,
+      Priority.MID, VisualAlert.none, AudibleAlert.none, .2, 0., 0.),
+    ET.NO_ENTRY: NoEntryAlert("Brake Hold Active"),
+  },
+
   EventName.parkBrake: {
     ET.USER_DISABLE: EngagementAlert(AudibleAlert.chimeDisengage),
     ET.NO_ENTRY: NoEntryAlert("Park Brake Engaged"),
@@ -611,6 +620,16 @@ EVENTS: Dict[int, Dict[str, Union[Alert, Callable[[Any, messaging.SubMaster, boo
 
   EventName.pedalPressed: {
     ET.USER_DISABLE: EngagementAlert(AudibleAlert.chimeDisengage),
+    ET.NO_ENTRY: NoEntryAlert("Pedal Pressed During Attempt",
+                              visual_alert=VisualAlert.brakePressed),
+  },
+
+  EventName.silentPedalPressed: {
+    ET.USER_DISABLE: Alert(
+      "",
+      "",
+      AlertStatus.normal, AlertSize.none,
+      Priority.MID, VisualAlert.none, AudibleAlert.none, .2, 0., 0.),
     ET.NO_ENTRY: NoEntryAlert("Pedal Pressed During Attempt",
                               visual_alert=VisualAlert.brakePressed),
   },
