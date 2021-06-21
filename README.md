@@ -9,8 +9,8 @@ pressing gas ( fast traffic )
 
 
 This fork is enhanced for Honda Accords. Just plug and play.
-It's  basically stock Openpilot with Honda Sesnsing Features (Spektors)/ Accord 1.5 CAN error fix
-and some of my modifications.
+I forked this from spektor56 accordtest branch with the CAN error fix for  Accord 1.5
+and added some modifications.
 
 URL install https://smiskol.com/fork/eyezenheim/Spektor_Eisenheim-0.8.5
 
