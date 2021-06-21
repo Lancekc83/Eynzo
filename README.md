@@ -1,3 +1,10 @@
+First of all Openpilot is an L2 driving agent. Thinking of it as L5 or selfdriving is foolish.
+This will save you some frustration later on. OP is just a glorified ADAS - for now.
+For best results in a fast traffic scennario always "hold the wheel"  and let OP do the work.
+Stop and go  or slow traffic, that's  the time you drive chill. 
+
+
+
 This fork is enhanced for Honda Accords. Just plug and play.
 It's  basically stock Openpilot with Honda Sesnsing Features (Spektors)/ Accord 1.5 CAN error fix
 and some of my modifications.
