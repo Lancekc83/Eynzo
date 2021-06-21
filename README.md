@@ -25,8 +25,8 @@ What does this fork do?
    Use a value of 1 for incremental changes.
 
 The above mod gave me the feeling of a car being PLANTED  on the ground, this how I gauge my setup.
-My condifence level is high. Due to high steer ratio, I called this a performance fork since it's
-very aggresive on curves. If you find it too aggressive you can lower it to 17.5
+My confidence level is high. Due to high steer ratio, I called this a performance fork since it's
+very aggresive on curves. If you find it too aggressive you can lower it to 17.5 orless.
 
 Note: I never touch the Driver Monitoring. As a precaution before you install a new fork.
 double check the DM located here /data/openpilot/selfdrive/monitoring/driver_monitor
