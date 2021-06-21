@@ -3,7 +3,7 @@ Fork of Spektor AccordTest Branch that fixed the CAN error on my 2018 Accord 1.5
 - SR learner is bypassed.
 - Steer Ratio of 17.99
 - "Laneless" is ON via lane_planner.py (Please leave Laneless Toggle OFF)
-- Camera offset is -0.15  Phone is 0.2° Left/Right  This should at least eliminate Left 
+- Camera offset is -0.15  Phone is 0.2° Left/Right  This should at least eliminate left hug.
 
 The above mod gave me the feeling of a car being planted on the ground. My condifence
 level is high. And curves are a godsend for our lowly Accord.
