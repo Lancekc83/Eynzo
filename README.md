@@ -1,5 +1,11 @@
-Fork of Spektor AccordTest Branch that fixed the CAN error on my 2018 Accord 1.5T
-  I added my specs.
+This fork is exclusively for Honda Accords. 
+Plug and Play and enjoy the drive.
+URL install https://smiskol,com/eyezenheim/spektor_eyezenheim-0.8.5
+
+What does this fork do?
+  Fixed the CAN error on my 2018 Accord 1.5T
+  Also added some of my mods.
+  
 - SR learner is bypassed.
 - Steer Ratio of 17.99
 - "Laneless" is ON via lane_planner.py (Please leave Laneless Toggle OFF)
