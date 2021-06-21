@@ -9,6 +9,17 @@ The above mod gave me the feeling of a car being planted on the ground. My condi
 level is high. And curves are a godsend for our lowly Accord.
 YMMV
 
+Note: I never touch the Driver Monitoring. As a precaution before you install a new fork.
+double check the DM located here /data/openpilot/selfdrive/monitoring/driver_monitor
+it should look like this for 085 
+# ******************************************************************************************
+#  NOTE: To fork maintainers.
+#  Disabling or nerfing safety features will get you and your users banned from our servers.
+#  We recommend that you do not change these numbers from the defaults.
+# ******************************************************************************************
+
+_AWARENESS_TIME = 35.  # passive wheel touch total timeout
+
 
 
 
