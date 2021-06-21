@@ -1,20 +1,21 @@
-This fork is exclusively for Honda Accords. 
-Plug and Play and enjoy the drive.
+This fork is enhanced for Honda Accords. Just plug and play.
+It's  basically stock Openpilot with Honda Sesnsing Features (Spektors)/ Accord 1.5 CAN error fix
+and some of my modifications.
 
 URL install https://smiskol.com/fork/eyezenheim/Spektor_Eisenheim-0.8.5
 
 What does this fork do?
-  Fixed the CAN error on my 2018 Accord 1.5T
-  Also added some of my mods.
-  
+ -Fixed the 0.8.5 CAN error on my 2018 Accord 1.5T (uses fingerprinting 1.0)
 - SR learner is bypassed.
-- Steer Ratio of 17.99
-- "Laneless" is ON via lane_planner.py (Please leave Laneless Toggle OFF)
+- Steer Ratio of 17.99 (static)
+- "Laneless" is ON via lane_planner.py with Laneless Toggle  OFF in the UI
 - Camera offset is -0.15  Phone is 0.2° Left/Right  This should at least eliminate left hug.
+- For others cars since the learner is bypassed it will use the stock default steerRatio.
+   Change accordingly,  it becomes more aggressive as you increase it and vice versa.
+   Use a value of 1 for incremental changes.
 
-The above mod gave me the feeling of a car being planted on the ground. My condifence
-level is high. And curves are a godsend for our lowly Accord.
-YMMV
+The above mod gave me the feeling of a car being PLANTED  on the ground, this how I gauge my setup.
+My condifence level is high and  the curves are great. 
 
 Note: I never touch the Driver Monitoring. As a precaution before you install a new fork.
 double check the DM located here /data/openpilot/selfdrive/monitoring/driver_monitor
