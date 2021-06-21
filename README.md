@@ -1,7 +1,9 @@
 First of all Openpilot is an L2 driving agent. Thinking of it as L5 or selfdriving is foolish.
 This will save you some frustration later on. OP is just a glorified ADAS - for now.
 For best results in a fast traffic scennario always "hold the wheel"  and let OP do the work.
-Stop and go  or slow traffic, that's  the time you drive chill. 
+Stop and go  or slow traffic, that's  the time you drive chill. https://www.youtube.com/c/EisenheimOpenpilot
+No hands on my videos is just for dramatic effects,  I usually drive with my hands touching the wheel and
+pressing gas ( fast traffic )
 
 
 
