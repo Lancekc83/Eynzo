@@ -29,7 +29,7 @@ My confidence level is high. Due to high steer ratio, I called this a performanc
 very aggresive on curves. If you find it too aggressive you can lower it to 17.5 orless.
 
 Note: I never touch the Driver Monitoring. As a precaution before you install a new fork.
-double check the DM located here /data/openpilot/selfdrive/monitoring/driver_monitor
+double check the DM located here /data/openpilot/selfdrive/monitoring/driver_monitor.py
 it should look like this for 085 
 # ******************************************************************************************
 #  NOTE: To fork maintainers.
