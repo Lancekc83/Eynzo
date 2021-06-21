@@ -1,7 +1,7 @@
 This fork is exclusively for Honda Accords. 
 Plug and Play and enjoy the drive.
 
-URL install https://smiskol.com/fork/eyezenheim/spektor_eyezenheim-0.8.5
+URL install https://smiskol.com/fork/eyezenheim/Spektor_Eyezenheim-0.8.5
 
 What does this fork do?
   Fixed the CAN error on my 2018 Accord 1.5T
