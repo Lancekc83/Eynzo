@@ -72,9 +72,6 @@ function two_init {
   # the flippening!
   LD_LIBRARY_PATH="" content insert --uri content://settings/system --bind name:s:user_rotation --bind value:i:1
 
-  # disable bluetooth
-  service call bluetooth_manager 8
-
   # Check for NEOS update
   if [ $(< /VERSION) != "$REQUIRED_NEOS_VERSION" ]; then
     if [ -f "$DIR/scripts/continue.sh" ]; then
