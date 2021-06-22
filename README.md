@@ -19,7 +19,7 @@ What does this fork do?
 - SR learner is bypassed.
 - Steer Ratio of 17.99 (static) 
 - "Laneless" is ON via lane_planner.py with Laneless Toggle  OFF in the UI
-- Camera offset is -0.06  Phone is 0.2° Left/Right  This should at least eliminate left hug.
+- Camera offset is -0.10  Phone is 0.2° Left/Right  This should at least eliminate left hug.
 - For others cars since the learner is bypassed it will use the stock default steerRatio.
    Change accordingly,  it becomes more aggressive as you increase it and vice versa.
    Use a value of 1 for incremental changes.
