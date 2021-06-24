@@ -72,10 +72,9 @@ LQR OFF
 
 
 
-Since mounting (eyeball install) is different you have to play with the camera offset toggle.
-If you think your drive is off.
+Since mounting (eyeball install) is different you have to play with the camera offset toggle,if you think your drive is off.
 Please remember to wait for a few more seconds after calibration hit 100% seems the progess bar 
-is kinda off, before starting your observation
+is not in sync, before starting your observation
 
 This is performance fork due to high steer ratio, 'holding the wheels" during fast curves as you 
 press the pedal is highly recommended. 
