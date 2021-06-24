@@ -1,7 +1,6 @@
-Dragonpilot, Spektor56 (honda sensing) Eisenehem all in One
+Dragonpilot, Spektor56 (Honda Sensing)Eisenheim all in One
 
 Eisenheim hacks:
-
 Enabled "laneless" via lane_planner.py . Leave Kale / laneless OFF
 Steer Ratio of 17.99 (Accord) IMPORTANT Toggle SR Learner OFF
 Replaced 085 DM model with 082 
@@ -31,7 +30,7 @@ with EMU installed (reboot needed)
 Open Android settings       emu device settings
 Close Android settings      emu device settings -c 
 
-NOTE: Needs this 3 setting for the perfect drive.
+NOTE: Need this 3 settings for that planted drive.
 Laneless OFF
 Learner OFF
 LQR OFF
@@ -41,6 +40,8 @@ If you think your drive is off.
 Please remember to wait for a few more seconds after calibration hit 100% seems the progess bar 
 is kinda off, before starting your observation
 
+This is performance fork due to high steer ratio, 'holding the wheels" during fast curves as you 
+press the pedal is highly recommended. 
 
 
 
