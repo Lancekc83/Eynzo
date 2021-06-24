@@ -1,4 +1,5 @@
-##Dragonpilot, Spektor56 (Honda Sensing),Eisenheim all in One
+Dragonpilot, Spektor56 (Honda Sensing),Eisenheim all in One
+URL install https://smiskol.com/fork/eyezenheim
 
 Eisenheim hacks:
 Enabled "laneless" via lane_planner.py . Leave Kale / laneless OFF
