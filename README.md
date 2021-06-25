@@ -18,10 +18,31 @@ What does this fork do?
  -Fixed the 0.8.5 CAN error on my 2018 Accord 1.5T (uses fingerprinting 1.0)
 - SR learner is bypassed.
 - Steer Ratio of 17.99 for accords.
-- "Laneless" is ON via lane_planner.py with Laneless Toggle  OFF in the UI
-- For others cars since the learner is bypassed it will use the stock default steerRatio.
+   For others cars since the learner is bypassed it will use the stock default steerRatio.
    Change accordingly,  it becomes more aggressive as you increase it and vice versa.
    Use a value of 1 for incremental changes.
+
+- "Laneless" is ON via lane_planner.py with Laneless Toggle  OFF in the UI
+- 0.8.2 DM model 
+- tesla sounds  , my work intermittently BT speaker recommended
+- 
+- BT toggled on at startup ( needs steps below) 
+- Installing EMU is highly recommended
+
+https://github.com/emu-sh/.oh-my-comma
+
+with EMU installed (reboot needed)
+
+Open Android settings
+
+[emu device settings]   
+
+then pair your bt device
+
+Close Android settings
+
+[emu device settings -c ]
+- 
 
 The above mod gave me the feeling of a car being PLANTED  on the ground, this how I gauge my setup.
 My confidence level is high. Due to high steer ratio, I called this a performance fork since it's
