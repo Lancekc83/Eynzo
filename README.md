@@ -17,7 +17,7 @@ URL install https://smiskol.com/fork/eyezenheim/Spektor_Eisenheim-0.8.5
 What does this fork do?
  -Fixed the 0.8.5 CAN error on my 2018 Accord 1.5T (uses fingerprinting 1.0)
 - SR learner is bypassed.
-- Steer Ratio of 17.99 (static) 
+- Steer Ratio of 17.99 for accords.
 - "Laneless" is ON via lane_planner.py with Laneless Toggle  OFF in the UI
 - For others cars since the learner is bypassed it will use the stock default steerRatio.
    Change accordingly,  it becomes more aggressive as you increase it and vice versa.
