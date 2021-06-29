@@ -11,9 +11,6 @@ Steer Ratio of 17.99 (Accord) IMPORTANT Toggle SR Learner OFF
 
 Replaced 085 DM model with 082 
 
-Auto Calibration (with % progress) every drive. Trust me it's worth it,especially if you unmount your C2.
-
-This will also reset your LiveParameters
 
 Bluetooth toggle ON 
 
