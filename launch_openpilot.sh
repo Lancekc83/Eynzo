@@ -6,7 +6,7 @@ if [ $size -le 1024 ];then
     git reset
 fi
 
-chmod +x reset_calib.sh && ./reset_calib.sh
+#chmod +x reset_calib.sh && ./reset_calib.sh
 
 export PASSIVE="0"
 exec ./launch_chffrplus.sh
