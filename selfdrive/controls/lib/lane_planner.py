@@ -8,8 +8,8 @@ from cereal import log
 TRAJECTORY_SIZE = 33
 # camera offset is meters from center car to camera
 if EON:
-  CAMERA_OFFSET = 0.06
-  PATH_OFFSET = 0.0
+  CAMERA_OFFSET = 0.50
+  PATH_OFFSET = 0.50
 elif TICI:
   CAMERA_OFFSET = -0.04
   PATH_OFFSET = -0.04
@@ -67,7 +67,7 @@ class LanePlanner:
     prob_mods = []
     for t_check in [0.0, 1.5, 3.0]:
       width_at_t = interp(t_check * (v_ego + 7), self.ll_x, width_pts)
-      prob_mods.append(interp(width_at_t, [4.0, 5.0], [1.0, 0.0]))
+      prob_mods.append(interp(width_at_t, [4.0, 5.0], [0.0, 0.0]))
     mod = min(prob_mods)
     l_prob *= mod
     r_prob *= mod
