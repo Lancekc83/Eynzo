@@ -11,8 +11,7 @@ else:
 
 
 CAMERA_FPS = 20
-SEGMENT_LENGTH = 60
-
+SEGMENT_LENGTH = 36
 
 def get_available_percent(default=None):
   try:
