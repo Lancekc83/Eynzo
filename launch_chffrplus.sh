@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+rm -rf /data/params/d_tmp/LiveParameters
+
 if [ -z "$BASEDIR" ]; then
   BASEDIR="/data/openpilot"
 fi
