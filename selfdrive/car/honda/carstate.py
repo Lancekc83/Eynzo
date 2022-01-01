@@ -400,6 +400,11 @@ class CarState(CarStateBase):
 
     if Params().get_bool('ACCdoesLKAS'):
       self.prev_cruise_enabled = ret.cruiseState.enabled
+      
+    if Params().get_bool('LKASdisableOnBrake'):
+      if ret.brakePressed:
+        self.lkasEnabled = False
+        self.resumeAvailable = False
 
     ret.steerError = False
     ret.steerWarning = False
