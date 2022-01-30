@@ -1,3 +1,18 @@
+Eyezenheim additions to this aragon branch:
+prius lqr (Accord Only)
+Steer Learner Bypassed with a SR 17.33 (static)
+ALC disabled 
+LiveParameters (Learners) Deletion upon Reboot will generate a new one once OnRoad
+I suggest to do a reboot prior driving.
+
+
+Car should drive
+
+
+
+
+
+
 🚨 Read before installing! 🚨   
 ------   
 The branch you are currently looking at is made for Honda/Acura. It will not work on other cars at it's current state, so please check the list for other branches or [Shane](https://github.com/sshane/openpilot) for Toyota/Lexus vehicles.   
