@@ -6,7 +6,7 @@ LiveParameters (Learners) Deletion upon Reboot will generate a new one once OnRo
 I suggest to do a reboot prior driving.
 
 
-Car should drive
+Car should drive very SILKY SMOOTH.
 
 
 
