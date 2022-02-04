@@ -1,12 +1,16 @@
 Eyezenheim additions to this aragon branch:
-prius lqr (Accord Only)
-Steer Learner Bypassed with a SR 17.33 (static)
-ALC disabled 
-LiveParameters (Learners) Deletion upon Reboot will generate a new one once OnRoad
-I suggest to do a reboot prior driving.
+
+Camera offset changes. See commit/
+Just mount your C2/C3 per commma's.
+Steer Learner Bypassed with a SR 18.33 (static) Other cars, need to play with steer your steer ratio, usually add a value of 1.
+LiveParameters (Learners) Deletion upon Reboot 
+
+Optimized for for Accord. Other cars YMMV
 
 
-Car should drive very SILKY SMOOTH.
+
+
+
 
 
 
