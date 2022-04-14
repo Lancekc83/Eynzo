@@ -1,5 +1,11 @@
-Note:
+Warning:
+By installing this software, you accept all responsibility for anything that might occur while you use it. All contributors to this fork are not liable. Use at your own risk.
+
 Based on Aragon's Fork (See Below)
+
+cd /data/ && \
+mv openpilot op_backup_$(date +%Y%m%d%H%M%S) ; \
+git clone https://github.com/eyezenheim/eyezenpilot.git openpilot -b Testing-OnRails-089 --single-branch --depth=1 
 
 It has a camera offset of -0.23 that will give you a right bias when on lanefull. Laneless is not affected, if you need more bias just add more values or vice versa.
 
