@@ -1,6 +1,9 @@
 Note:
 Based on Aragon's Fork (See Below)
 
+It has a camera offset of -0.23 that will give you a right bias when on lanefull. Laneless is not affected, if you need more bias just add more values or vice versa.
+
+
 Steer ratio learner bypassed with a SR 17.33 (static) Other cars, need to play with steer your steer ratio, usually    add a value of 1. Goto  openpilot/selfrive/car/[your_car]/interface.py 
    To see learner generated Steer ratio, ssh then paste    cat /data/params/d/LiveParameters
    e.g steer ratio of 16.45  just add 1  to change to 17.45 Please be reminded not all 
