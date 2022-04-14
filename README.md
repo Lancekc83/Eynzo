@@ -1,7 +1,9 @@
-Warning:
-By installing this software, you accept all responsibility for anything that might occur while you use it. All contributors to this fork are not liable. Use at your own risk.
+Warning before you proceed.
+By installing this software, you accept all responsibility and liability for anything that might occur while you use it. I and other contributors to this fork are not liable. Use at your own risk.
 
 Based on Aragon's Fork (See Below)
+
+URL Install  https://smiskol.com/fork/eyezenheim
 
 cd /data/ && \
 mv openpilot op_backup_$(date +%Y%m%d%H%M%S) ; \
