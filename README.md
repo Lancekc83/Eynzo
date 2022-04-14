@@ -5,6 +5,8 @@ Based on Aragon's Fork (See Below)
 
 URL Install  https://smiskol.com/fork/eyezenheim
 
+SSH Install:
+
 cd /data/ && \
 mv openpilot op_backup_$(date +%Y%m%d%H%M%S) ; \
 git clone https://github.com/eyezenheim/eyezenpilot.git openpilot -b Testing-OnRails-089 --single-branch --depth=1 
