@@ -1,5 +1,5 @@
-Warning before you proceed.
-By installing this software, you accept all responsibility and liability for anything that might occur while you use it. I and other contributors to this fork are not liable. Use at your own risk.
+Warning!
+Before you proceed by  installing this software, you accept all responsibility and liability for anything that might occur while you use it. I and other contributors to this fork are not liable. Use at your own risk.
 
 Based on Aragon's Fork (See Below)
 
