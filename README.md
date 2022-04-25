@@ -18,6 +18,10 @@ with this LQR FORK
 
 -Right Hugging when in Lanefull Mode
 
+-AutoDelete of LiveParameters every 2 minutes ( it always regenerate after initial deletion)
+
+-Accord drives the BEST after a FRESH deletion of LiveParamaeters.
+
 To go back to stock camera offset 
 
 sed -i '/CAMERA_OFFSET/s/-0.53/0.06/' /data/openpilot/selfdrive/controls/lib/lane_planner.py && reboot
