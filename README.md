@@ -1,6 +1,17 @@
 Warning!
 Before you proceed by  installing this software, you accept all responsibility and liability for anything that might occur while you use it. I and other contributors to this fork are not liable. Use at your own risk.
 
+******************************************************************************************************************************************************************
+This  Testing-OnRails-089-OP_Edit-LQR as the name implies, has an op_edit buit in. You can toggle LQR True from False.
+I use op_edit for this purpose ONLY. Some of the params may not work.
+camera offset params does not work for sure.
+with this LQR FORK
+-LQR ON (need to toggle True)
+-Steer Ratio 19.33 ( Bypassed SR Learner )
+And the rest are below 
+
+
+
 Based on Aragon's Fork (See Below)
 
 URL Install  https://smiskol.com/fork/eyezenheim
