@@ -8,6 +8,17 @@ camera offset params does not work for sure.
 with this LQR FORK
 -LQR ON (need to toggle True)
 -Steer Ratio 19.33 ( Bypassed SR Learner )
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+To run op_edit.py
+chmod 755 op_edit.py
+then
+./op_edit.py
+Once in change LQR to True
+That's it!
+________________________________________________________________________________________________________________________________________________________________
+
+
 And the rest are below 
 
 
