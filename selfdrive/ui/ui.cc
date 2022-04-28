@@ -137,8 +137,15 @@ static void update_state(UIState *s) {
   if (sm.frame % (UI_FREQ / 2) == 0) {
     scene.engageable = sm["controlsState"].getControlsState().getEngageable();
     scene.dm_active = sm["driverMonitoringState"].getDriverMonitoringState().getIsActiveMode();
+    scene.lane_pos_enabled = Params().getBool("LanePositionEnabled");
   }
 
+  if (scene.lane_pos != 0 && t - scene.lane_pos_set_t > scene.lane_pos_timeout){
+    scene.lane_pos = 0;
+    scene.lane_pos_timeout = scene.lane_pos_timeout_short_t;
+    Params().put("LanePosition", "0", 1);
+  }
+  
   if (scene.started && sm.updated("controlsState")) {
     scene.controls_state = sm["controlsState"].getControlsState();
   }
@@ -431,4 +438,24 @@ void Device::updateWakefulness(const UIState &s) {
   }
 
   setAwake(awake_timeout, should_wake);
+}
+
+
+int offset_button_y(UIState *s, int center_y, int radius){
+  if ((*s->sm)["controlsState"].getControlsState().getAlertSize() == cereal::ControlsState::AlertSize::SMALL){
+    center_y = 2 * center_y / 3 + radius / 2;
+  }
+  else if ((*s->sm)["controlsState"].getControlsState().getAlertSize() == cereal::ControlsState::AlertSize::MID){
+    center_y = (center_y + radius) / 2;
+  }
+  return center_y;
+}
+
+int offset_right_side_button_x(UIState *s, int center_x, int radius, bool doShift){
+  if ((doShift || (*s->sm)["controlsState"].getControlsState().getAlertSize() == cereal::ControlsState::AlertSize::SMALL)
+  && s->scene.measure_cur_num_slots > 0){
+    int off = s->scene.measure_slots_rect.right() - center_x;
+    center_x = s->scene.measure_slots_rect.x - off - bdr_s;
+  }
+  return center_x;
 }

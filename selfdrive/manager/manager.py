@@ -37,6 +37,8 @@ def manager_init():
     ("HasAcceptedTerms", "0"),
     ("OpenpilotEnabledToggle", "1"),
     ("LanelessMode", "0"),
+    ("LanePositionEnabled", "0"),
+    ("LanePosition", "0"),
   ]
   if not PC:
     default_params.append(("LastUpdateTime", datetime.datetime.utcnow().isoformat().encode('utf8')))
