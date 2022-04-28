@@ -134,6 +134,11 @@ TogglesPanel::TogglesPanel(QWidget *parent) : QWidget(parent) {
                                 "In MPH, the civic rounds slightly too low. This feature makes openpilot accelerate an extra 0.76% so the two speeds on the dash line up. (No more staying at 69 when set at 70).",
                                 "../assets/offroad/icon_openpilot.png",
                                 this));
+  toggles.append(new ParamControl("LanePositionEnabled",
+                                  "Adjustable lane position",
+                                  "Adds onscreen arrows to the left and right sides of the onroad screen that can be used to adjust lane position temporarily.",
+                                  "../assets/offroad/icon_road.png",
+                                  this));
 
 #ifdef ENABLE_MAPS
   toggles.append(new ParamControl("NavSettingTime24h",
