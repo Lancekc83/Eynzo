@@ -58,7 +58,6 @@ public:
 
 private:
   void paintEvent(QPaintEvent *event);
-  void mousePressEvent(QMouseEvent* e) override;
 
   OnroadAlerts *alerts;
   NvgWindow *nvg;

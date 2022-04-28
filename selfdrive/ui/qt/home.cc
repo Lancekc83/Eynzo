@@ -82,45 +82,6 @@ void HomeWindow::mousePressEvent(QMouseEvent* e) {
     }
     return;
   }
-
-   // lane position buttons
-  if (QUIState::ui_state.scene.started && QUIState::ui_state.scene.lane_pos_enabled && QUIState::ui_state.scene.lane_pos_left_touch_rect.ptInRect(e->x(), e->y())){
-    if (QUIState::ui_state.scene.lane_pos == 1){
-      if (QUIState::ui_state.scene.lastTime - QUIState::ui_state.scene.lane_pos_set_t < 2.){
-        QUIState::ui_state.scene.lane_pos_timeout = QUIState::ui_state.scene.lane_pos_timeout_long_t;
-      }
-      else{
-        QUIState::ui_state.scene.lane_pos = 0;
-        Params().put("LanePosition", "0", 1);
-      }
-    }
-    else{
-      QUIState::ui_state.scene.lane_pos = 1;
-      QUIState::ui_state.scene.lane_pos_timeout = QUIState::ui_state.scene.lane_pos_timeout_short_t;
-      QUIState::ui_state.scene.lane_pos_set_t = QUIState::ui_state.scene.lastTime;
-      Params().put("LanePosition", "1", 1);
-    }
-    return;
-  }
-  if (QUIState::ui_state.scene.started && QUIState::ui_state.scene.lane_pos_enabled && QUIState::ui_state.scene.lane_pos_right_touch_rect.ptInRect(e->x(), e->y())){
-    if (QUIState::ui_state.scene.lane_pos == -1){
-      if (QUIState::ui_state.scene.lastTime - QUIState::ui_state.scene.lane_pos_set_t < 2.){
-        QUIState::ui_state.scene.lane_pos_timeout = QUIState::ui_state.scene.lane_pos_timeout_long_t;
-      }
-      else{
-        QUIState::ui_state.scene.lane_pos = 0;
-        Params().put("LanePosition", "0", 1);
-      }
-    }
-    else{
-      QUIState::ui_state.scene.lane_pos = -1;
-      QUIState::ui_state.scene.lane_pos_timeout = QUIState::ui_state.scene.lane_pos_timeout_short_t;
-      QUIState::ui_state.scene.lane_pos_set_t = QUIState::ui_state.scene.lastTime;
-      Params().put("LanePosition", "-1", 2);
-    }
-    return;
-  }
-  
   // Handle sidebar collapsing
   if (onroad->isVisible() && (!sidebar->isVisible() || e->x() > sidebar->width()) && !(e->globalX() >= 1500 && e->globalY() >= 885)) {
 
