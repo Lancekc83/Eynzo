@@ -126,6 +126,20 @@ typedef struct UIScene {
   float lane_pos_timeout = lane_pos_timeout_short_t;
   float lane_pos_set_t = 0.;
 
+// measures
+  int measure_min_num_slots = 0;
+  int measure_max_num_slots = 10;
+  int measure_cur_num_slots = 3;
+  int measure_slots[10];
+  Rect measure_slots_rect;
+  Rect measure_slot_touch_rects[10];
+  int num_measures = UIMeasure::NUM_MEASURES; // the number of cases handled in ui_draw_measures() in paint.cc
+  Rect speed_rect;
+
+  float lastTime = 0., sessionInitTime = 0.;
+  float paramsCheckLast = 0., paramsCheckFreq = 0.1; // check params at 10Hz
+  bool onePedalModeActive, disableDisengageOnGasEnabled, onePedalEngageOnGasEnabled, visionBrakingEnabled;
+
   int laneless_mode;
   Rect laneless_btn_touch_rect;
 
