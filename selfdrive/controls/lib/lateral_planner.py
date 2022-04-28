@@ -45,7 +45,7 @@ DESIRES = {
 class LateralPlanner():
   def __init__(self, CP, use_lanelines=True, wide_camera=False):
     self.use_lanelines = use_lanelines
-    self.LP = LanePlanner(wide_camera, CP.mass)
+    self.LP = LanePlanner(wide_camera)
 
     self.last_cloudlog_t = 0
     self.steer_rate_cost = CP.steerRateCost
@@ -94,14 +94,13 @@ class LateralPlanner():
     if self.second > 1.0:
       self.use_lanelines = not Params().get_bool("EndToEndToggle")
       self.laneless_mode = int(Params().get("LanelessMode", encoding="utf8"))
-      self.lane_pos = float(Params().get("LanePosition", encoding="utf8"))
       self.second = 0.0
     v_ego = sm['carState'].vEgo
     active = sm['controlsState'].active
     measured_curvature = sm['controlsState'].curvature
 
     md = sm['modelV2']
-    self.LP.parse_model(sm['modelV2'], self.lane_pos)
+    self.LP.parse_model(sm['modelV2'])
     if len(md.position.x) == TRAJECTORY_SIZE and len(md.orientation.x) == TRAJECTORY_SIZE:
       self.path_xyz = np.column_stack([md.position.x, md.position.y, md.position.z])
       self.t_idxs = np.array(md.position.t)
