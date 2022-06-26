@@ -2,29 +2,19 @@ Warning!
 Before you proceed by  installing this software, you accept all responsibility and liability for anything that might occur while you use it. I and other contributors to this fork are not liable. Use at your own risk.
 
 ******************************************************************************************************************************************************************
-This  Testing-OnRails-089-OP_Edit-LQR as the name implies, has an op_edit buit in.
+This  Testing-OnRails-089-OP_Edit-LQR 
 
-You can toggle LQR True from False.
-
-I use op_edit for this purpose ONLY. Some of the params may not work.
-
-Camera Offset option does not work.
 
 with this LQR FORK
 
--LQR ON (need to toggle True)
+-LQR ON (need to toggle True) using Op_edit
 
 -Steer Ratio 19.33 ( Bypassed SR Learner )
 
--Right Hugging when in Lanefull Mode
 
--AutoDelete of LiveParameters every 2 minutes ( it always regenerate after initial deletion)
+-AutoDelete of LiveParameters every 30 seconds
 
--Accord drives the BEST after a FRESH deletion of LiveParamaeters.
-
-To go back to stock camera offset 
-
-sed -i '/CAMERA_OFFSET/s/-0.53/0.06/' /data/openpilot/selfdrive/controls/lib/lane_planner.py && reboot
+- (NEW) Longer Calibration time from 1 minute to 5-7 minutes
 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 To run op_edit.py  do this.
