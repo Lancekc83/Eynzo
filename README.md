@@ -7,7 +7,7 @@ This  Testing-OnRails-089-OP_Edit-LQR
 
 -LQR ON (need to toggle True) using Op_edit
 
--Steer Ratio 19.33 ( Bypassed SR Learner )
+-Steer Ratio 25.00 ( Bypassed SR Learner )
 
 
 -AutoDelete of LiveParameters every 30 seconds
