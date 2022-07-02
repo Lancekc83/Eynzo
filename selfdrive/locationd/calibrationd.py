@@ -26,7 +26,7 @@ MAX_YAW_RATE_FILTER = np.radians(2)  # per second
 # This is at model frequency, blocks needed for efficiency
 SMOOTH_CYCLES = 400
 BLOCK_SIZE = 100
-INPUTS_NEEDED = 50   # Minimum blocks needed for valid calibration
+INPUTS_NEEDED = 5   # Minimum blocks needed for valid calibration
 INPUTS_WANTED = 50   # We want a little bit more than we need for stability
 MAX_ALLOWED_SPREAD = np.radians(2)
 RPY_INIT = np.array([0.0,0.0,0.0])
