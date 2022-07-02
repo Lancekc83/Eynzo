@@ -1,32 +1,20 @@
 Warning!
+
 Before you proceed by  installing this software, you accept all responsibility and liability for anything that might occur while you use it. I and other contributors to this fork are not liable. Use at your own risk.
+HOLD THE WHEEL WHILE DRIVING !
 
 ******************************************************************************************************************************************************************
 This  Testing-OnRails-089-OP_Edit-LQR 
 
 
--LQR ON (need to toggle True) using Op_edit
 
--Steer Ratio 25.00 ( Bypassed SR Learner )
+-Steer Ratio 23.00 ( Bypassed SR Learner ) updated 07/02/22
 
 
 -AutoDelete of LiveParameters every 30 seconds
 
-- (NEW) Longer Calibration time from 1 minute to 5-7 minutes
-
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-To run op_edit.py  do this.
-
-chmod 755 op_edit.py
-
-then
-
-./op_edit.py
-
-
-Once in change LQR to True
-
-That's it!
+- No need for LQR via op_edit.py 
+- I find the car to be unstable  with high steer ratio AND LQR  set to TRUE.
 
 ________________________________________________________________________________________________________________________________________________________________
 
