@@ -10,11 +10,21 @@ Please do the following
 Here are the values to change 
 
 Please run op_edit.py
--ssh
+via ssh
+
+
 -enter     chmod 777 op_edit.py    ( to grant permission)
+
+
 -enter      ./op_edit.py           (to open)
+
+
         - set steer ratio to 18.33
+
+
         - set LQR to True
+
+        
         - reboot
 
 
