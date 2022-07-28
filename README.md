@@ -6,15 +6,17 @@ HOLD THE WHEEL WHILE DRIVING !
 ******************************************************************************************************************************************************************
 This  Testing-OnRails-089-OP_Edit-LQR 
 
+Please do the following
+Here are the values to change 
 
+Please run op_edit.py
+-ssh
+-enter     chmod 777 op_edit.py    ( to grant permission)
+-enter      ./op_edit.py           (to open)
+        - set steer ratio to 18.33
+        - set LQR to True
+        - reboot
 
--Steer Ratio 23.00 ( Bypassed SR Learner ) updated 07/02/22
-
-
--AutoDelete of LiveParameters every 30 seconds
-
-- No need for LQR via op_edit.py 
-- I find the car to be unstable  with high steer ratio AND LQR  set to TRUE.
 
 ________________________________________________________________________________________________________________________________________________________________
 
