@@ -27,7 +27,7 @@ via ssh
         - set LQR to True
 
         
-        - reboot
+        - reboot then recalibrate
 
 If using laneline you can change the placement of your car according to your taste via /selfdrive/lib/controls/lane_planner.py      (op_edit camera offset option it seems it does not work)
 
