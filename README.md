@@ -27,8 +27,12 @@ via ssh
         
         - reboot
 
+If using laneline you can change the placement of your car according to your taste via /selfdrive/lib/controls/lane_planner.py      (op_edit camera offset option it seems it does not work)
 
-________________________________________________________________________________________________________________________________________________________________
+
+          -negative camera offset  value will move your car to the right e.g  -0.23 will give you right bias and vice versa. So just play with it. Need to reboot .
+          
+________________________________________________________________________________ _______________________________________________________________________________
 
 
 And the rest are below 
