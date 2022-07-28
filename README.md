@@ -4,7 +4,9 @@ Before you proceed by  installing this software, you accept all responsibility a
 HOLD THE WHEEL WHILE DRIVING !
 
 ******************************************************************************************************************************************************************
-This  Testing-OnRails-089-OP_Edit-LQR 
+This  is my default branch Testing-OnRails-089-OP_Edit-LQR 
+
+URL install   https://smiskol.com/fork/eyezenheim
 
 Please do the following
 Here are the values to change 
