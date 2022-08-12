@@ -28,6 +28,31 @@ via ssh
 
         
         - reboot then recalibrate
+        
+        
+        Here's my setting
+        
+        1. camera_offset: 0.06  
+2. global_df_mod: 1.0  
+3. min_TR: 0.9  
+4. alca_no_nudge_speed: 90.0  
+5. steer_ratio: 18.33  
+6. upload_onroad: True  (static)
+7. disengage_on_gas: False  
+8. update_behavior: alert  (static)
+9. dynamic_gas: False  
+10. hide_auto_df_alerts: False  
+11. df_button_alerts: audible  
+12. disable_charging: 30  (static)
+13. hide_model_long: False  (static)
+14. prius_use_pid: False  (static)
+15. use_lqr: True  (static)
+16. use_steering_model: False  (static)
+17. corollaTSS2_use_indi: False  (static)
+18. rav4TSS2_use_indi: False  (static)
+19. standstill_hack: True  (static)
+20. toyota_distance_btn: False  (static)
+21. username: None  
 
 If using laneline you can change the placement of your car according to your taste via /selfdrive/lib/controls/lane_planner.py      (op_edit camera offset option it seems it does not work)
 
