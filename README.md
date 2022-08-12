@@ -32,7 +32,11 @@ via ssh
         
         Here's my setting
         
-        1. camera_offset: 0.06  
+        
+        
+        
+        
+1. camera_offset: 0.06  
 2. global_df_mod: 1.0  
 3. min_TR: 0.9  
 4. alca_no_nudge_speed: 90.0  
@@ -54,10 +58,7 @@ via ssh
 20. toyota_distance_btn: False  (static)
 21. username: None  
 
-If using laneline you can change the placement of your car according to your taste via /selfdrive/lib/controls/lane_planner.py      (op_edit camera offset option it seems it does not work)
 
-
-          -negative camera offset  value will move your car to the right e.g  -0.23 will give you right bias and vice versa. So just play with it. Need to reboot .
           
 ________________________________________________________________________________ _______________________________________________________________________________
 
